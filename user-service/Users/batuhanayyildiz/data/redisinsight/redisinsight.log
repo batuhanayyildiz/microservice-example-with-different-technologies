@@ -1,0 +1,39 @@
+WARNING 2024-04-02 11:43:20,555 django.request Not Found: /api/instance/23ada40c-0e3b-4a66-b4c2-db2f9d33afe6/cli/servers/
+WARNING 2024-04-02 11:43:20,966 django.request Not Found: /api/instance/23ada40c-0e3b-4a66-b4c2-db2f9d33afe6/get-keys/
+WARNING 2024-04-02 11:43:22,095 django.request Not Found: /api/instance/23ada40c-0e3b-4a66-b4c2-db2f9d33afe6/redisgraph/check-module-loaded/
+WARNING 2024-04-02 11:43:22,123 django.request Not Found: /api/instance/23ada40c-0e3b-4a66-b4c2-db2f9d33afe6/redisgraph/find-keys/
+WARNING 2024-04-02 11:43:22,986 django.request Not Found: /api/instance/23ada40c-0e3b-4a66-b4c2-db2f9d33afe6/redisgears/check-module-loaded/
+ERROR 2024-04-02 11:44:05,351 redisinsight Unknown command error from redis instance:
+Traceback (most recent call last):
+  File "./redisinsight/utils/__init__.py", line 199, in _wrapped_view
+  File "./redisinsight/core/views/decorators.py", line 21, in wrapped_view
+  File "./redisinsight/redisgraph/decorators.py", line 34, in _wrapped_view
+  File "./redisinsight/redisgraph/views/__init__.py", line 26, in module_info
+  File "./redisinsight/redisgraph/services/__init__.py", line 341, in check_redisgraph_module_loaded_in_instance
+  File "./redisinsight/redisgraph/services/__init__.py", line 310, in check_redisgraph_module_loaded
+  File "/usr/local/lib/python3.6/site-packages/redis/client.py", line 878, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python3.6/site-packages/redis/client.py", line 892, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python3.6/site-packages/redis/connection.py", line 752, in read_response
+    raise response
+redis.exceptions.ResponseError: unknown command 'GRAPH.DELETE', with args beginning with: '__$$__NON_EXISTENT_KEY__$$__' 
+ERROR 2024-04-02 11:44:05,356 django.request Unknown Status Code: /api/instance/5ac80b05-ae5c-4dd6-a8b0-ee4c2d5f5bd1/redisgraph/check-module-loaded/
+ERROR 2024-04-02 11:45:33,242 redisinsight Unknown command error from redis instance:
+Traceback (most recent call last):
+  File "./redisinsight/utils/__init__.py", line 199, in _wrapped_view
+  File "./redisinsight/core/views/decorators.py", line 21, in wrapped_view
+  File "./redisinsight/redisgraph/decorators.py", line 34, in _wrapped_view
+  File "./redisinsight/redisgraph/views/__init__.py", line 26, in module_info
+  File "./redisinsight/redisgraph/services/__init__.py", line 341, in check_redisgraph_module_loaded_in_instance
+  File "./redisinsight/redisgraph/services/__init__.py", line 310, in check_redisgraph_module_loaded
+  File "/usr/local/lib/python3.6/site-packages/redis/client.py", line 878, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python3.6/site-packages/redis/client.py", line 892, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python3.6/site-packages/redis/connection.py", line 752, in read_response
+    raise response
+redis.exceptions.ResponseError: unknown command 'GRAPH.DELETE', with args beginning with: '__$$__NON_EXISTENT_KEY__$$__' 
+ERROR 2024-04-02 11:45:33,243 django.request Unknown Status Code: /api/instance/5ac80b05-ae5c-4dd6-a8b0-ee4c2d5f5bd1/redisgraph/check-module-loaded/
+WARNING 2024-04-02 11:46:10,392 django.request Bad Request: /api/instance/5ac80b05-ae5c-4dd6-a8b0-ee4c2d5f5bd1/redistimeseries/module-info/
+WARNING 2024-04-02 11:46:11,479 django.request Bad Request: /api/instance/5ac80b05-ae5c-4dd6-a8b0-ee4c2d5f5bd1/check-redisearch-module-loaded/
