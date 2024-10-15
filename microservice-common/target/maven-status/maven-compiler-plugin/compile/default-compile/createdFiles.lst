@@ -1,0 +1,17 @@
+com\demo\authservice\ValidationResponse.class
+com\demo\authservice\TokenOrBuilder.class
+com\demo\authservice\ValidationResponseOrBuilder.class
+com\demo\authservice\AuthServiceGrpc$AuthServiceFutureStub.class
+com\demo\authservice\AuthServiceGrpc$MethodHandlers.class
+com\demo\authservice\AuthServiceGrpc$AuthServiceDescriptorSupplier.class
+com\demo\authservice\Auth.class
+com\demo\authservice\AuthServiceGrpc$AuthServiceBlockingStub.class
+com\demo\authservice\ValidationResponse$1.class
+com\demo\authservice\AuthServiceGrpc.class
+com\demo\authservice\AuthServiceGrpc$AuthServiceImplBase.class
+com\demo\authservice\AuthServiceGrpc$AuthServiceStub.class
+com\demo\authservice\Token$1.class
+com\demo\authservice\Token.class
+com\demo\authservice\Token$Builder.class
+com\demo\authservice\ValidationResponse$Builder.class
+com\demo\authservice\Auth$1.class

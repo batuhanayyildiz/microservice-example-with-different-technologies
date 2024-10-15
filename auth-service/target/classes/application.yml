@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    username: postgres
+    password: 123
+    url: jdbc:postgresql://localhost:5435/kafka_auth_db
+  jpa:
+    show_sql: false
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 0
+
+jwt:
+  key: "MIICXQIBAAKBgQCEuciGc0nT0dxqv5a/9coUXJw0YL+GWAkjtkeE1x7/jMA4Z4wnSK01PQpnmUEbUKgkMLQQ/NOUxRrRRrhLixRFq+hJKTgM/uPE8kgWGJlL15wmS5f54YjXLoxK1xHdUvQkOgsNbnoKt8cpUxepBnHcdDPvxiYcvEf7H+eWwOZnqwIDAQABAoGAbF5cshqT3xVsyOQhrB59nt520/Viq8hZvgTopDgZIULE98jkEHcwpVVvl2L0W98hSltRysUD5GaDHPiHJXcrVwJgkHDj6gB02j65/yPkO/g9Fi/xcqA34Z3ypPgy8+N5+FxPe6UbRXyFcCbKSedTDivqQnDAlJ587P205XGN0pECQQDAA1qr5qZIzlrgdzgZBgaMxz7QpSCRbFWmjbzL/iXfftqdBtBtjoaycKk9P1TfijdDHYx8o2HpupOizsSKAApfAkEAsPSepQZVZoJxGrQkzejBK7+t/5/erDuJapSDtwxs1dcTj4anjazIdsQGh0tYkwqP+9Z4SOS2VG9JJQCKdab+NQJBAJSZQ++rRd8sjBoRScHb7u++NvfEA2tn+vU11fnNS0Qm6UsC/gT7e3TXSbKTs7x4PAJd+N5wlxMKiL1D5cii9WMCQQCJdh1fGKJytVXjZplIk0ysDYS/FJPHu6At+Rywr6hEHYWGcxXpypUXHYPsya0O3J+pBJwAFBtHUAPECL2GU6kZAkA30CLxZGw8qHt7HOWD7BdU3PPOn9Ys1bB5F00ggDMNJNMpWlH3D9qVg18OClX4/5byAMdpfKDZht4THj/pMmRC"
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.application.name}:${random.value}
+
+
+
+kafka:
+  host: localhost:9092
+  topics:
+    user-created:
+      topicName: ${spring.application.name}.user-created.0
+      partitionCount: 2
+      replicationFactor: 1
+      retentionInMs: 604800000
+
+grpc:
+  server:
+    port: 9892
+
+
