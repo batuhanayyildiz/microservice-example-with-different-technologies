@@ -1,4 +1,6 @@
-version: '3.1'
+
+name: 'microservice-example'
+
 services:
   ############################### Cache (Redis) ###############################
   redis-user-cache:
@@ -25,7 +27,7 @@ services:
     ports:
       - '8001:8001'
     volumes:
-      - ./Users/batuhanayyildiz/data/redisinsight:/db
+      - ./../user-service/Users/batuhanayyildiz/data/redisinsight:/db
     networks:
       - my-network
 
@@ -134,8 +136,8 @@ services:
     image: docker.elastic.co/logstash/logstash:8.3.3
     container_name: logstash
     volumes:
-      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
-      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./../user-service/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./../user-service/logstash/pipeline:/usr/share/logstash/pipeline:ro
     ports:
       - "5044:5044"
       - "5000:5000/tcp"
