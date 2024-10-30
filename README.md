@@ -45,4 +45,4 @@ Then, all necessary technologies will be ready for test. After all services are 
 ### Security
 ![img_1.png](img_1.png)
 ### User Registration
-![img_2.png](img_2.png)
+![img_3.png](img_3.png)
